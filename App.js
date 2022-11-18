@@ -7,8 +7,9 @@ import HomeScreen from "./src/Screens/HomeScreen";
 import ContentFirstAid from "./components/ContentFirstAid";
 import EmergencyScreen from "./src/Screens/EmergencyScreen";
 import EmergencyNumberScreen from "./src/Screens/EmergencyNumberScreen";
-import HospitalLocation from "./src/Screens/LocationScreen";    
+import HospitalLocation from "./src/Screens/LocationScreen";
 import Information from "./components/Information";
+import NavigationBar from "./components/NavigationBar";
  
 const Stack = createNativeStackNavigator();
 
@@ -17,15 +18,15 @@ export default function App() {
     <NativeBaseProvider>
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name = "Home" component={HomeScreen} />
+        <Stack.Screen name = "Home" component={NavigationBar} />
         <Stack.Screen name = "ContentFirstAid" component={ContentFirstAid} />
         <Stack.Screen name = "EmergencyScreen" component={EmergencyScreen} />
         <Stack.Screen name="EmergencyNumberScreen" component={EmergencyNumberScreen} />
         <Stack.Screen name="HospitalLocation" component={HospitalLocation} />
         <Stack.Screen name="Information" component={Information} />
-          
+
+
       </Stack.Navigator>
-      {/* <NavigationBar/> */}
     </NavigationContainer>
     </NativeBaseProvider>
   );
