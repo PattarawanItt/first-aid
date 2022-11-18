@@ -10,24 +10,22 @@ import EmergencyNumberScreen from "./src/Screens/EmergencyNumberScreen";
 import HospitalLocation from "./src/Screens/LocationScreen";
 import Information from "./components/Information";
 import NavigationBar from "./components/NavigationBar";
- 
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return(
     <NativeBaseProvider>
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name = "Home" component={NavigationBar} />
-        <Stack.Screen name = "ContentFirstAid" component={ContentFirstAid} />
-        <Stack.Screen name = "EmergencyScreen" component={EmergencyScreen} />
-        <Stack.Screen name="EmergencyNumberScreen" component={EmergencyNumberScreen} />
-        <Stack.Screen name="HospitalLocation" component={HospitalLocation} />
-        <Stack.Screen name="Information" component={Information} />
-
-
-      </Stack.Navigator>
-    </NavigationContainer>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName = "Home" >
+          <Stack.Screen name = "Home" component = { NavigationBar }/> 
+          <Stack.Screen name = "ContentFirstAid" component = { ContentFirstAid }/>
+          <Stack.Screen name = "EmergencyScreen" component = { EmergencyScreen }/> 
+          <Stack.Screen name = "EmergencyNumberScreen" component = { EmergencyNumberScreen }/> 
+          <Stack.Screen name = "HospitalLocation" component = { HospitalLocation }/> 
+          < Stack.Screen name = "Information" component = { Information }/>
+        </Stack.Navigator> 
+      </NavigationContainer> 
     </NativeBaseProvider>
   );
 }
