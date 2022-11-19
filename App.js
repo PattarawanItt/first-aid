@@ -14,7 +14,7 @@ import NavigationBar from "./components/NavigationBar";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return(
+  return ( 
     <NativeBaseProvider>
       <NavigationContainer>
         <Stack.Navigator initialRouteName = "Home" >
